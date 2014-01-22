@@ -1,4 +1,4 @@
-Pensiv -- <a href="pensiv.meteor.com">go to site</a>
+Pensiv -- <a href="http://pensiv.meteor.com">go to site</a>
 ======
 
 Pensiv is a realtime thoughtstreaming app.  There's no particular organization to how, when, or where we have great or important ideas.  Pensiv is the only platform robust enough to always be there when you need it.
