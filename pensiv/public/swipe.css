@@ -1,0 +1,12 @@
+.propbox{
+
+	height:70px;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left:15px;
+	padding-right:15px;
+	font-weight:bold;
+}.propspan{
+	padding-top:10px;
+	line-height:50px;
+}

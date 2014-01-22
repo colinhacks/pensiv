@@ -1,0 +1,36 @@
+<svg width="640" height="480" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+ <defs>
+  <filter id="svg_5_blur">
+   <feGaussianBlur stdDeviation="1.5"/>
+  </filter>
+  <filter id="svg_13_blur">
+   <feGaussianBlur stdDeviation="1.6"/>
+  </filter>
+  <filter id="svg_2_blur">
+   <feGaussianBlur stdDeviation="1.5"/>
+  </filter>
+  <pattern id="gridpattern" patternUnits="userSpaceOnUse" x="0" y="0" width="100" height="100">
+   <image id="svg_3" x="0" y="0" width="100" height="100"/>
+  </pattern>
+  <filter id="svg_12_blur">
+   <feGaussianBlur stdDeviation="1.9"/>
+  </filter>
+  <filter id="svg_20_blur">
+   <feGaussianBlur stdDeviation="2"/>
+  </filter>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <ellipse rx="2" id="svg_15" cy="275" cx="212" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="#000000" fill="#66cc33"/>
+  <ellipse rx="3" id="svg_16" cy="265" cx="197" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="#000000" fill="#66cc33"/>
+  <g id="svg_24">
+   <ellipse ry="195.99999" rx="200.99998" id="svg_1" cy="208.99999" cx="366" stroke-width="5" fill="#66cc33" stroke="#000000"/>
+   <ellipse ry="39.5" rx="42" id="svg_2" cy="334.5" cx="324" stroke-width="5" fill="#000000" stroke="#000000" filter="url(#svg_2_blur)"/>
+   <ellipse ry="61.5" rx="67" id="svg_13" cy="258.5" cx="276" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="#000000" stroke="#000000" filter="url(#svg_13_blur)"/>
+   <path id="svg_5" d="m230,142c0,-56.3536 61.980652,-102 138.5,-102c76.519379,0 138.5,45.6464 138.5,102c0,56.353592 -61.980621,102.000031 -138.5,102.000031c-76.519348,0 -138.5,-45.646439 -138.5,-102.000031z" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="#000000" stroke="#000000" filter="url(#svg_5_blur)"/>
+   <path fill="#66cc33" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" d="m356.870789,163.575943c0,0 -7.466064,-83.268646 73.593079,-96.915359c81.059143,-13.646732 -73.593079,96.915359 -73.593079,96.915359z" id="svg_12" transform="rotate(65.4664 408.883 112.848)" stroke="#66cc33" filter="url(#svg_12_blur)"/>
+   <line fill="none" stroke-width="14" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x1="407" y1="185" x2="513" y2="223" id="svg_20" stroke="#66cc33" filter="url(#svg_20_blur)" transform="rotate(3.36646 460 204)"/>
+  </g>
+ </g>
+</svg>

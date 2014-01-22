@@ -1,0 +1,401 @@
+<head>
+  <title>Pensiv</title>
+  <link rel="stylesheet" type="text/css" href="pensiv.css">
+  <style>
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.swipe-wrap > div {
+  float:left;
+  width:100%;
+  position: relative;
+}
+  </style>
+  <link rel="stylesheet" type="text/css" href="swipe.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script type="text/javascript" src="ionic.js"></script>
+  <script type="text/javascript" src="swipe.js"></script>
+
+</head>
+
+<body>
+  {{renderPage}}
+</body>
+
+
+<!--
+################
+###   HELLO  ###
+################
+-->
+<template name="hello">
+{{#unless currentUser}}
+{{> tswrapper }}
+{{else}}
+{{> landing}}
+{{/unless}}
+</template>
+
+
+<!--
+###################
+###  TSWRAPPER  ###
+###################
+-->
+<template name="tswrapper">
+  <div class="container" style="height:100%;text-align:center;color:white;background-color:black;">
+  		<div class="box">
+  			{{> thoughtstream}}
+  		</div>
+  </div>
+</template>
+
+
+
+
+<!--
+#################
+###  LANDING  ###
+#################
+-->
+<template name="landing">
+	<div style="height:100%;width:100%;text-align:center;color:white;background-color:black;">
+	<div class="bar bar-header bar-stable">
+		<h1 class="title">Pensiv&nbsp;<span style="font-size:.8em;color:grey;">home</span></h1>	
+	</div>
+ 	<br/>
+ 	<br/>
+ 	<br/>
+ 	<div>
+ 	<img style="width:90px;height:90px;"src="logo_alpha.png" alt="logo" />
+   	</div>
+  	<h2 style="color:white;text-align:;">Finally.</h2>
+  	<br/> 
+  	<h4 style="color:white;text-align:;">
+  		A mental organization system that actually works.
+  	</h4>
+  	<br/>
+  	<h4 style="color:white;text-align:;">
+  		So easy a nematode could use it.
+  	</h4>
+  	<br/><br/>
+  	{{loginButtons align=center}}
+  	</div>
+<!--  <input type="button" value="Click" />-->
+</template>
+
+
+
+
+<!--
+#############
+###  404  ###
+#############
+-->
+<template name="404">
+  <h1>Oops, page not found</h1>
+  <p>The page you were looking for has gone missing!</p>
+</template>
+
+
+<template name="swipetest">
+	<div  id='xslider' class='container xswipe'>
+	  <div  class='xswipe-wrap'>
+	    <div style="height:100px;">dgshjdbfskjdbf </div>
+	    
+	    <div style="visibility:visible;color:black;background:pink;font-weight:bold;height:75px;;">HAI </div>
+	    <div style="visibility:visible;color:black;background:pink;font-weight:bold;height:75px;;">HAI </div>
+	    <div style="visibility:visible;color:black;background:pink;font-weight:bold;height:75px;;">HAI </div>
+	    <div style="visibility:visible;color:black;background:pink;font-weight:bold;height:75px;;">HAI </div>
+	    <div style="visibility:visible;color:black;background:pink;font-weight:bold;height:75px;;">HAI </div>
+	    <div style="visibility:visible;color:black;background:pink;font-weight:bold;height:75px;;">HAI </div>
+	    <div style="visibility:visible;color:black;background:pink;font-weight:bold;height:75px;;">HAI </div>
+	    <div style="visibility:visible;color:black;background:pink;font-weight:bold;height:75px;;">HAI </div>
+	    <div style="visibility:visible;color:black;background:pink;font-weight:bold;height:75px;;">HAI </div>
+	    <div style="visibility:visible;color:black;background:pink;font-weight:bold;height:75px;;">HAI </div>
+	    <div style="visibility:visible;color:black;background:pink;font-weight:bold;height:75px;;">HAI </div>
+	    <div style="visibility:visible;color:black;background:pink;font-weight:bold;height:75px;;">HAI </div>
+	    <div style="visibility:visible;color:black;background:pink;font-weight:bold;height:75px;;">HAI </div>
+	    <div style="visibility:visible;color:black;background:pink;font-weight:bold;height:75px;;">HAI </div>
+
+	  </div>
+	</div>
+
+	
+</template>
+
+<!--
+#######################
+###  THOUGHTSTREAM  ###
+#######################
+-->
+<template name="thoughtstream" >
+
+	<div style="320px;" class="bar bar-header bar-stable">
+  		<h1 class="title">Pensiv&nbsp;<span style="font-size:.8em;color:grey;">thoughtstream</span></h1>
+		<button id="search" class=" button button-clear button-positive">
+		<img style="display:inline !important;float:right;height:100%;" id="search" src="search.svg" />
+		</button>
+				<!--<a id="search"  class="button button-clear">Search</a>
+			</object>-->
+	</div>
+  	<div class="list">
+  		<div class=" row">
+  			<div class="col">&nbsp;</div>
+  
+		</div>
+		<div class="col">
+			<br/>
+			<h3 style="color:white;font-size:auto;text-align:left;">Leave no neural pathway unturned.</h3>
+			<br/>
+			<div id="status" class="row" style="line-height:70%;">
+				categorize your thoughts by hashtag
+			</div>
+			<div class="button-bar">
+	  			
+				<a class="button button-balanced quicktag"  style="padding-left:4px;padding-right:4px;">
+					#todo
+				</a>
+
+				<a class="button button-balanced quicktag" style="padding-left:4px;padding-right:4px;">
+					#idea
+				</a>
+			
+				<a class="button button-balanced quicktag" style="padding-left:4px;padding-right:4px;">
+					#event
+				</a>
+			
+				<a class="button button-balanced quicktag" style="padding-left:4px;padding-right:4px;">
+					#person
+				</a>
+			</div>
+
+  		<label class="item item-input">
+    		<textarea id="thepensiv" placeholder="e.g. #quote 'I am the danger' --WW " rows="6"></textarea>
+  		</label>
+		<br/>
+		<button class="button button-full button-balanced publishbtn">
+  			Publish
+		</button>
+		</div>
+	</div>
+</template>
+
+
+<!--
+#######################
+###  SEARCHRESULTS  ###
+#######################
+-->
+<template name="oldsearchresults">
+	<div style="height:100%;width:100%;text-align:center;color:white;background-color:black;">
+
+		<div class="bar bar-header bar-stable">
+			<!--<a id="thoughtstream"  class="button button-clear">Thoughtstream</a>-->
+			<a id="searchbtn" class=" button icon-left button-clear button-dark">
+				<img id="thoughtstream" style="height:22px;vertical-align:middle;" src="ios7-arrow-left.svg" />
+				Search
+			</a>
+			<h1 class="title">Pensiv&nbsp;<span style="font-size:.8em;color:grey;">results</span></h1>
+
+			<a id="listbtn" class="button icon-right button-clear button-dark">
+				
+				Lists
+				<img id="thoughtstream" style="height:22px;vertical-align:middle;" src="ios7-arrow-right.svg" />
+			</a>	
+		</div>
+		<br/>
+		<br/>
+		<h2 style="color:white;">Results</h2>
+		<div id='xslider' class='container'>
+		  <div class='xswipe-wrap'>
+		    {{#each results}}
+		    <div style="color:white;">{{text}}</div>	
+		    {{/each}}
+		    <div></div>
+		  </div>
+
+		</div>
+		
+	</div>
+</template>
+
+<!--
+##################
+### NEWLISTING ###
+##################
+-->
+<template name="searchresults">
+	<div style="height:100%;width:100%;text-align:center;color:white;background-color:black;padding-bottom:30px;">
+
+		<div class="bar bar-header bar-stable">
+			<!--<a id="thoughtstream"  class="button button-clear">Thoughtstream</a>-->
+			<a id="searchbtn" class=" button icon-left button-clear button-dark">
+				<img id="thoughtstream" style="height:22px;vertical-align:middle;" src="ios7-arrow-left.svg" />
+				Search
+			</a>
+			<h1 class="title">Pensiv&nbsp;<span style="font-size:.8em;color:grey;">results</span></h1>
+
+			<a id="listbtn" class="button icon-right button-clear button-dark">
+				
+				Lists
+				<img id="thoughtstream" style="height:22px;vertical-align:middle;" src="ios7-arrow-right.svg" />
+			</a>	
+		</div>
+		<br/>
+		<br/>
+		<h2 style="color:white;">Search for #todo</h2>
+		<div style="overflow: scroll !important;" id='xslider' class='container xswipe'>
+		  <div class='xswipe-wrap list'>
+		    {{#each results}}
+		    <div style="color:white;text-align:left;vertical-align:middle;height:50px;background:black;" class="item">
+		    	{{text}}
+		    </div>	
+		    {{/each}}
+		    <div style="color:white;text-align:left;vertical-align:middle;height:50px;background:black;" class="item">
+		    	End of results.
+		    </div>	
+		    <div style="color:white;text-align:left;vertical-align:middle;height:50px;background:black;" class="item">
+		    	&nbsp;
+		    </div>	
+		  </div>
+
+		</div>
+
+		
+	</div>
+</template>
+
+
+<!--
+####################
+###  SEARCHPAGE  ###
+####################
+-->
+<template name="searchpage">
+	<div style="height:100%;width:100%;text-align:center;color:white;background-color:black;">
+		<div class="bar bar-header bar-stable">
+			<!--<a id="thoughtstream"  class="button button-clear">Thoughtstream</a>-->
+			<a class="homebtn button icon-left button-clear button-dark">
+				<img id="thoughtstream" style="height:22px;vertical-align:middle;" src="ios7-arrow-left.svg" />
+				Back
+			</a>
+			<h1 class="title">Pensiv&nbsp;<span style="font-size:.8em;color:grey;">search</span></h1>	
+			<a class="listbtn button icon-right button-clear button-dark">
+				
+				Lists
+				<img id="thoughtstream" style="height:22px;vertical-align:middle;" src="ios7-arrow-right.svg" />
+			</a>
+		</div>
+		<br/><br/><br/>
+		<h3 style="text-align:left;font-weight:bold;padding:10px;color:white;">Search by hashtag(s) to sort your thoughtstream.</h3>
+
+		<div class="list list-inset" style="margin-bottom:0px;">
+		  <label class="item item-input">
+	  		<img id="thoughtstream" style="height:30px;" src="search.svg" />
+		    <input type="search" id="tagsearch" style="-webkit-appearance:searchfield;" placeholder="i.e. #todo #person">
+		  </label>
+		</div>
+		<!--<span id="advanced" style="border-radius:5px;padding:4px;margin:4px;float:left;text-decoration:underline;;">
+			Advanced
+		</span>-->
+		<h3 id="statusdiv" style="font-weight:bold;padding:10px;color:white;"></h3>
+		
+		<div style="text-align:left;">
+
+
+			<br/>
+			<div class="propbox">	
+				<span class="propspan">
+					Your to-do list.
+				</span>
+				<button id="todo" style="float:right;width:120px;" class="button button-balanced">
+					#todo
+				</button>
+			</div>
+			<div class="propbox">	
+				<span class="propspan">
+					Forget LinkedIn.
+				</span>
+				<button id="event" style="float:right;width:120px;" class="button button-balanced">
+					#person
+				</button>
+			</div>
+			<div class="propbox">	
+				<span class="propspan">
+					A calendar too!?
+				</span>
+				<button id="event" style="float:right;width:120px;" class="button button-balanced">
+					#event
+				</button>
+			</div>
+			<div class="propbox">	
+				<span class="propspan">
+					Change the world.
+				</span>
+				<button id="event" style="float:right;width:120px;" class="button button-balanced">
+					#idea
+				</button>
+			</div>
+
+
+		</div>
+		
+	</div>
+	<div class="bar bar-footer bar-balanced">
+  		<div class="title">Footer</div>
+	</div>
+</template>
+
+
+
+
+
+<template name="logo">
+<svg width="64" height="48" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+ <defs>
+  <filter id="svg_5_blur">
+   <feGaussianBlur stdDeviation="1.5"/>
+  </filter>
+  <filter id="svg_13_blur">
+   <feGaussianBlur stdDeviation="1.6"/>
+  </filter>
+  <filter id="svg_2_blur">
+   <feGaussianBlur stdDeviation="1.5"/>
+  </filter>
+  <pattern height="100" width="100" y="0" x="0" patternUnits="userSpaceOnUse" id="gridpattern">
+   <image height="100" width="100" y="0" x="0"/>
+  </pattern>
+  <filter id="svg_12_blur">
+   <feGaussianBlur stdDeviation="1.9" in="SourceGraphic"/>
+  </filter>
+  <filter id="svg_20_blur">
+   <feGaussianBlur stdDeviation="2" in="SourceGraphic"/>
+  </filter>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <ellipse fill="#66cc33" stroke="#000000" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" cx="212" cy="275" id="svg_15" rx="2"/>
+  <ellipse fill="#66cc33" stroke="#000000" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" cx="197" cy="265" id="svg_16" rx="3"/>
+  <g id="svg_24">
+   <ellipse stroke="#000000" fill="#66cc33" stroke-width="5" cx="366" cy="208.99999" id="svg_1" rx="200.99998" ry="195.99999"/>
+   <ellipse filter="url(#svg_2_blur)" stroke="#000000" fill="#000000" stroke-width="5" cx="324" cy="334.5" id="svg_2" rx="42" ry="39.5"/>
+   <ellipse filter="url(#svg_13_blur)" stroke="#000000" fill="#000000" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" cx="276" cy="258.5" id="svg_13" rx="67" ry="61.5"/>
+   <path filter="url(#svg_5_blur)" stroke="#000000" fill="#000000" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" d="m230,142c0,-56.3536 61.98065,-102 138.5,-102c76.51938,0 138.5,45.6464 138.5,102c0,56.35359 -61.98062,102.00003 -138.5,102.00003c-76.51935,0 -138.5,-45.64644 -138.5,-102.00003z" id="svg_5"/>
+   <path filter="url(#svg_12_blur)" stroke="#66cc33" transform="rotate(65.4664 408.883 112.848)" id="svg_12" d="m356.87079,163.57594c0,0 -7.46606,-83.26865 73.59308,-96.91537c81.05914,-13.64673 -73.59308,96.91537 -73.59308,96.91537z" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="#66cc33"/>
+   <line transform="rotate(3.36646 460 204)" filter="url(#svg_20_blur)" stroke="#66cc33" id="svg_20" y2="223" x2="513" y1="185" x1="407" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="14" fill="none"/>
+  </g>
+ </g>
+</svg>
+</template>
+
+
+

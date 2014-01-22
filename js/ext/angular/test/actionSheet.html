@@ -1,0 +1,168 @@
+<html ng-app="actionTest">
+  <head>
+    <meta charset="utf-8">
+    <title>Action Sheet</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../../../../dist/css/ionic.css">
+    <style>
+      .row .col > div {
+        width: 100%;
+        height: 80px;
+      }
+
+    </style>
+    <script src="../../../../dist/js/ionic.js"></script>
+    <script src="../../../../dist/js/angular/angular.js"></script>
+    <script src="../../../../dist/js/angular/angular-animate.js"></script>
+    <script src="../../../../dist/js/angular/angular-route.js"></script>
+    <script src="../../../../dist/js/angular/angular-touch.js"></script>
+    <script src="../../../../dist/js/angular/angular-sanitize.js"></script>
+    <script src="../../../../dist/js/angular-ui/angular-ui-router.js"></script>
+    <script src="../../../../dist/js/ionic-angular.js"></script>
+  </head>
+  <body ng-controller="ActionCtrl">
+    <content>
+      <div class="row">
+        <div class="col">
+          <div style="background-color: #eee" ng-click="show()">
+          </div>
+        </div>
+        <div class="col">
+          <div style="background-color: #eee" ng-click="show()">
+          </div>
+        </div>
+        <div class="col">
+          <div style="background-color: #eee" ng-click="show()">
+          </div>
+        </div>
+        <div class="col">
+          <div style="background-color: #eee" ng-click="show()">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div style="background-color: #eee" ng-click="show()">
+          </div>
+        </div>
+        <div class="col">
+          <div style="background-color: #eee" ng-click="show()">
+          </div>
+        </div>
+        <div class="col">
+          <div style="background-color: #eee" ng-click="show()">
+          </div>
+        </div>
+        <div class="col">
+          <div style="background-color: #eee" ng-click="show()">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div style="background-color: #eee" ng-click="show()">
+          </div>
+        </div>
+        <div class="col">
+          <div style="background-color: #eee" ng-click="show()">
+          </div>
+        </div>
+        <div class="col">
+          <div style="background-color: #eee" ng-click="show()">
+          </div>
+        </div>
+        <div class="col">
+          <div style="background-color: #eee" ng-click="show()">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div style="background-color: #eee" ng-click="show()">
+          </div>
+        </div>
+        <div class="col">
+          <div style="background-color: #eee" ng-click="show()">
+          </div>
+        </div>
+        <div class="col">
+          <div style="background-color: #eee" ng-click="show()">
+          </div>
+        </div>
+        <div class="col">
+          <div style="background-color: #eee" ng-click="show()">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div style="background-color: #eee" ng-click="show()">
+          </div>
+        </div>
+        <div class="col">
+          <div style="background-color: #eee" ng-click="show()">
+          </div>
+        </div>
+        <div class="col">
+          <div style="background-color: #eee" ng-click="show()">
+          </div>
+        </div>
+        <div class="col">
+          <div style="background-color: #eee" ng-click="show()">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div style="background-color: #eee" ng-click="show()">
+          </div>
+        </div>
+        <div class="col">
+          <div style="background-color: #eee" ng-click="show()">
+          </div>
+        </div>
+        <div class="col">
+          <div style="background-color: #eee" ng-click="show()">
+          </div>
+        </div>
+        <div class="col">
+          <div style="background-color: #eee" ng-click="show()">
+          </div>
+        </div>
+      </div>
+
+      <button ng-click="show()" class="button">Show</button>
+
+    </content>
+    <script>
+      angular.module('actionTest', ['ionic', 'ngAnimate'])
+
+      .controller('ActionCtrl', function($scope, $ionicActionSheet) {
+        $scope.show = function() {
+          $ionicActionSheet.show({
+            buttons: [
+              { text: 'Share' },
+              { text: 'Move' },
+            ],
+            destructiveText: 'Delete',
+            titleText: 'Modify your album',
+            cancelText: 'Cancel',
+            cancel: function() {
+              console.log('CANCELLED');
+            },
+            buttonClicked: function(index) {
+              console.log('BUTTON CLICKED', index);
+              return true;
+            },
+            destructiveButtonClicked: function() {
+              console.log('DESTRUCT');
+              return true;
+            }
+          });
+        };
+       });
+    </script>
+  </body>
+</html>

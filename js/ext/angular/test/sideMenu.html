@@ -1,0 +1,74 @@
+<html ng-app="sideMenuTest">
+  <head>
+    <meta charset="utf-8">
+    <title>Side Menus</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../../../../dist/css/ionic.css">
+    <script src="../../../../dist/js/ionic.js"></script>
+    <script src="../../../../dist/js/angular/angular.js"></script>
+    <script src="../../../../dist/js/angular/angular-animate.js"></script>
+    <script src="../../../../dist/js/angular/angular-route.js"></script>
+    <script src="../../../../dist/js/angular/angular-touch.js"></script>
+    <script src="../../../../dist/js/angular/angular-sanitize.js"></script>
+    <script src="../../../../dist/js/angular-ui/angular-ui-router.js"></script>
+    <script src="../../../../dist/js/ionic-angular.js"></script>
+  </head>
+  <body>
+
+    <div ng-controller="MenuCtrl">
+      <side-menus>
+        <pane side-menu-content>
+          <header class="bar bar-header bar-assertive">
+            <button class="button button-icon" ng-click="openLeft()"><i class="icon ion-navicon"></i></button>
+            <h1 class="title">Slide me</h1>
+          </header>
+          <content has-header="true">
+            <h1>Content</h1>
+          </content>
+        </pane>
+        <side-menu side="left">
+          <header class="bar bar-header bar-assertive">
+            <h1 class="title">Left</h1>
+          </header>
+          <content has-header="true">
+            <ul class="list">
+              <a href="#" class="item" ng-repeat="item in list">
+                {{item.text}}
+              </a>
+            </ul>
+          </content>
+        </side-menu>
+        <side-menu side="right">
+          <header class="bar bar-header bar-assertive">
+            <h1 class="title">Right</h1>
+          </header>
+          <content>
+            <ul class="list">
+              <a href="#" class="item" ng-repeat="item in list">
+                {{item.text}}
+              </a>
+            </ul>
+          </content>
+        </side-menu>
+      </side-menus>
+    </div>
+    <script>
+      angular.module('sideMenuTest', ['ionic'])
+
+      .controller('MenuCtrl', function($scope) {
+        $scope.list = [];
+        for(var i = 0; i < 20; i++) {
+          $scope.list.push({
+            text: 'Item ' + i
+          });
+        }
+        $scope.openLeft = function() {
+          $scope.sideMenuController.toggleLeft();
+        };
+      });
+    </script>
+  </body>
+</html>
+
